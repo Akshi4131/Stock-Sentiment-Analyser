@@ -15,8 +15,6 @@ function App() {
   const [redditTrend, setRedditTrend] = useState(null);
   const [newsCounts, setNewsCounts] = useState(null);
   const [newsTrend, setNewsTrend] = useState(null);
-  const [newsName, setNewsName] = useState('');
-  const [redditName, setRedditName] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [correctedStock, setCorrectedStock] = useState('');
@@ -37,9 +35,7 @@ function App() {
     try {
       const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const newsRes = await axios.get(`${API_URL}/news-analyze?stock=${stock}`);
-      setNewsCounts(newsRes.data.sentiment_counts);
       setNewsTrend(newsRes.data.trend_data);
-      setNewsName(newsRes.data.stock_searched);
       
       if (newsRes.data.was_corrected) {
         setCorrectedStock(newsRes.data.stock_searched);
@@ -50,7 +46,6 @@ function App() {
 
       setRedditCounts(redditRes.data.sentiment_counts);
       setRedditTrend(redditRes.data.trend_data);
-      setRedditName(redditRes.data.stock_searched);
     } catch (error) {
       console.error('Error fetching data:', error);
       setError('Failed to fetch data. Please try again.');
