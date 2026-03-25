@@ -1,1 +1,54 @@
-# Stock-Sentiment-Analyser
+# 📈 Stock Sentiment Analyzer
+
+An enterprise-grade, real-time sentiment analysis dashboard that aggregates and processes financial signals from **Reddit** and **Global News APIs**. Built with a high-performance **Python/Flask** backend using HuggingFace Transformers and a modern **React** frontend.
+
+![Main Dashboard](https://github.com/Akshi4131/Stock-Sentiment-Analyser/raw/main/screenshots/dashboard_preview.png)
+
+## 🚀 Key Features
+
+- **Multi-Source Intelligence**: Scrapes real-time discussions from subreddits like `r/wallstreetbets` and `r/stocks` while simultaneously fetching global financial news.
+- **AI-Powered Sentiment**: Utilizes specialized financial NLP models (`ProsusAI/finbert`) for high-accuracy sentiment classification (Positive/Negative/Neutral).
+- **Unified Risk Signal**: Mathematically aggregates multiple sentiment counts into a single "Combined Average" recommendation meter (Strong Sell to Strong Buy).
+- **Interactive Visualizations**: Dynamic Donut Charts and Trend Bar Charts powered by Recharts for visual data exploration.
+- **Enterprise UI**: A clean, elegant light-theme dashboard designed for professional readability and 100% mobile responsiveness.
+- **Performance Optimized**: Features model pre-loading and batched inference to deliver results in < 2 seconds.
+
+## 🛠️ Technology Stack
+
+- **Frontend**: React.js, Axios, Recharts, Lucide Icons
+- **Backend**: Flask (Python 3.x), PyTorch, HuggingFace Transformers, PRAW (Reddit API)
+- **Sentiment Model**: `ProsusAI/finbert` (Quantized for CPU efficiency)
+
+## ⚙️ Setup & Installation
+
+### Prerequisite: API Keys
+Create a `.env` file in the `server/` directory:
+```env
+REDDIT_CLIENT_ID=your_id
+REDDIT_CLIENT_SECRET=your_secret
+NEWSAPI_KEY=your_newsapi_key
+HUGGINGFACE_TOKEN=your_token
+```
+
+### 1. Backend Setup
+```bash
+cd server
+python -m venv .venv
+source .venv/bin/scripts/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python run.py
+```
+
+### 2. Frontend Setup
+```bash
+cd stock-sentiment
+npm install
+npm start
+```
+
+## 📱 Mobile View
+The dashboard is fully responsive across mobile, tablet, and desktop viewports.
+
+---
+**Created by Akshi Gupta**  
+*NTCC Project - MCA*
