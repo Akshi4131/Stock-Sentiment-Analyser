@@ -33,16 +33,6 @@ HUGGINGFACE_TOKEN=your_token
 ### 1. Backend Setup
 ```powershell
 cd server
-# Create virtual environment if not already done
-python -m venv .venv
-
-# Activate on Windows (PowerShell)
-# Note: If you get a "Scripts are disabled" error, run:
-# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-.\.venv\Scripts\Activate.ps1
-
-# Install requirements
-pip install -r requirements.txt
 
 # Run server
 python run.py
