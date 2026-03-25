@@ -37,6 +37,8 @@ cd server
 python -m venv .venv
 
 # Activate on Windows (PowerShell)
+# Note: If you get a "Scripts are disabled" error, run:
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\.venv\Scripts\Activate.ps1
 
 # Install requirements
