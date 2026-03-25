@@ -35,6 +35,7 @@ function App() {
     try {
       const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       const newsRes = await axios.get(`${API_URL}/news-analyze?stock=${stock}`);
+      setNewsCounts(newsRes.data.sentiment_counts);
       setNewsTrend(newsRes.data.trend_data);
       
       if (newsRes.data.was_corrected) {
