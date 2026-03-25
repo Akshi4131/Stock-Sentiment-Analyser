@@ -1,0 +1,10 @@
+flask
+flask-cors
+torch
+transformers
+praw
+requests
+gunicorn
+pandas
+numpy
+python-dotenv
