@@ -1,0 +1,82 @@
+/* src/components/InputForm.css */
+
+.input-form {
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-form input {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  min-width: 350px;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #f8fafc;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-form input::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.input-form input:focus {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(0, 229, 255, 0.6);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.input-form button {
+  padding: 14px 32px;
+  background: rgba(0, 229, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00E5FF;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-form button:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 229, 255, 0.15);
+  border-color: #00E5FF;
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.2);
+}
+
+.input-form button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .input-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-form input {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .input-form button {
+    width: 100%;
+  }
+}

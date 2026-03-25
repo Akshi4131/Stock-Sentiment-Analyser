@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading sentiment model...
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 104/104 [00:00<00:00, 7159.75it/s]
+Model loaded successfully!
+({'positive': 1.0, 'neutral': 0.0, 'negative': 1.0}, [{'date': datetime.date(2023, 1, 1), 'negative': 0, 'positive': 1}, {'date': datetime.date(2023, 1, 2), 'negative': 1, 'positive': 0}])
