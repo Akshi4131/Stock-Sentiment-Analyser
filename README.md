@@ -2,6 +2,8 @@
 
 An enterprise-grade, real-time sentiment analysis dashboard that aggregates and processes financial signals from **Reddit** and **Global News APIs**. Built with a high-performance **Python/Flask** backend using HuggingFace Transformers and a modern **React** frontend.
 
+![Main Dashboard](https://github.com/Akshi4131/Stock-Sentiment-Analyser/raw/main/screenshots/dashboard_preview.png)
+
 ## 🚀 Key Features
 
 - **Multi-Source Intelligence**: Scrapes real-time discussions from subreddits like `r/wallstreetbets` and `r/stocks` while simultaneously fetching global financial news.
@@ -31,16 +33,6 @@ HUGGINGFACE_TOKEN=your_token
 ### 1. Backend Setup
 ```powershell
 cd server
-# Create virtual environment if not already done
-python -m venv .venv
-
-# Activate on Windows (PowerShell)
-# Note: If you get a "Scripts are disabled" error, run:
-# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-.\.venv\Scripts\Activate.ps1
-
-# Install requirements
-pip install -r requirements.txt
 
 # Run server
 python run.py
@@ -52,6 +44,9 @@ cd stock-sentiment
 npm install
 npm start
 ```
+
+## 📱 Mobile View
+The dashboard is fully responsive across mobile, tablet, and desktop viewports.
 
 ## 🌐 Deployment Guide (Recommended)
 
@@ -65,7 +60,7 @@ To ensure high performance for the AI models, we recommend the following profess
 ### 2. Frontend (Vercel)
 - Connect your GitHub repo to **Vercel**.
 - **Root Directory:** Set to `stock-sentiment`.
-- **Environment Variable:** Add **`REACT_APP_API_URL`** and set it to your deployed Backend URL (e.g., `https://your-backend.onrender.com`).
+- **Environment Variable:** Add `REACT_APP_API_URL` and set it to your deployed Backend URL (e.g., `https://your-backend.onrender.com`).
 - Vercel will automatically handle the build and deployment.
 
 ---
